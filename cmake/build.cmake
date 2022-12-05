@@ -114,6 +114,13 @@ if(ENABLE_EGL_ALPHA_COMPONENT_OF_COLOR_BUFFER)
   )
 endif()
 
+# Enable wayland async buffer swapping.
+if(ENABLE_EGL_ASYNC_BUFFER_SWAPPING)
+  add_definitions(
+    -DENABLE_EGL_ASYNC_BUFFER_SWAPPING
+  )
+endif()
+
 set(CPP_WRAPPER_SOURCES_CORE
   "src/flutter/shell/platform/common/client_wrapper/engine_method_result.cc"
   "src/flutter/shell/platform/common/client_wrapper/standard_codec.cc"
